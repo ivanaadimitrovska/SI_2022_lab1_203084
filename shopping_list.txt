@@ -1,0 +1,5 @@
+1. Milk
+2. Juice
+3. Bread
+4. Eggs
+5. Chocolate
