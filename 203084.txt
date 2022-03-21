@@ -1,0 +1,178 @@
+1. git clone https://github.com/ivanaadimitrovska/SI_2022_lab1_203084.git //so ovaa naredba go klonirame repozitoriumot, za da go imame folderot na nashiot kompjuter
+
+2. cd SI_2022_lab1_203084 // vleguvame vo folderot za da gi izvrshime zadachite
+
+4. git add .
+
+5. git commit -m “Add 5 items to the shopping list” // so ovie dve naredbi ja dodavame datotekata shopping_list.txt vo koja sme vnesile 5 sluchajni proizvodi
+
+6. git add .
+
+7. git commit -m “Add quantities to the items.” // koga ke dodademe kolichina na site stavki, pravime commit
+
+8. git checkout -b branch1 // ja kreirame grankata branch1
+
+9. git checkout -b branch2 //ja kreirame grankata branch2
+
+10. C:\Users\ivana\SI_2022_lab1_203084>git log
+commit 1996990fc0f03837b96d873b2f069bf79e52432b (HEAD -> branch2, master, branch1)
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:09:48 2022 +0100
+
+    Add quantities to the items
+
+commit a2f374914d6a4647d9057ccc38154c68849c70be
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:09:06 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 9ceff2fd8331910f15e091bc162086324406ccd9 (origin/master, origin/HEAD)
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:03:26 2022 +0100
+
+    Update README.md
+
+commit d3a12c3e65921f713436262f216153e69bbad47c
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:03:04 2022 +0100
+
+    Initial commit
+
+11. git push origin master //ja sinhronizirame grankata master so repozitoriumot
+
+12. git push origin branch1 // ja sinhronizirame grankata branch1 so repozitoriumot
+
+13.git push origin branch2 //ja sinhronizirame grankata branch2 so repozitoriumot
+
+14. git checkout branch1 //se prefrluvame na grankata branch1
+
+15. git add .
+
+16. git commit -m “Change quantity of item #5” // ja menuvame kolichinata na pettata stavka i pravime commit
+
+17. git checkout master //se vrakjame na grankata master
+
+18. git add .
+
+19. git commit -m “Change quantity of item #2” // ja menuvame kolichinata na vtorata stavka i pravime commit
+
+20. git push origin master //ja sinhronizirame grankata master so repozitoriumot
+
+21. git push origin branch1 // ja sinhronizirame grankata branch1 so repozitoriumot
+
+22.git push origin branch2 //ja sinhronizirame grankata branch2 so repozitoriumot
+
+23. git checkout branch2 //se prefrluvame na grankata branch2
+
+24. git add .
+
+25. git commit -m “Modify item #4” //go menuvame imeto na chetvrtata stavka i pravime commit
+
+26. git log
+commit 9cd84585b47eb582cf18f8cbedec1fe383a0e9dd (HEAD -> branch2)
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:15:04 2022 +0100
+
+    Modify item #4
+
+commit 1996990fc0f03837b96d873b2f069bf79e52432b (origin/branch2)
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:09:48 2022 +0100
+
+    Add quantities to the items
+
+commit a2f374914d6a4647d9057ccc38154c68849c70be
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:09:06 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 9ceff2fd8331910f15e091bc162086324406ccd9
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:03:26 2022 +0100
+
+    Update README.md
+
+commit d3a12c3e65921f713436262f216153e69bbad47c
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:03:04 2022 +0100
+
+    Initial commit
+
+27. git add .
+
+28. git commit -m "Add item #6" //so ova dodavame shesta stavka 
+
+29. git rebase -i HEAD~2 // vaka gi zemame poslednite dva commit-i 
+pick 9cd8458 Modify item #4
+squash 2b60135 Add item #6 // pick go menuvame vo squash za ovie dva commit-i da gi spoime vo eden 
+
+# This is a combination of 2 commits.
+# This is the 1st commit message:
+
+Modify item #4 and add item #6
+
+# This is the commit message #2: //sega ja brishime porakata na prviot i vtoriot commit i kaj prviot commit ja stavame porakata
+				//Modify item #4 and add item #6 koja e potrebna za da oznachi deka sme gi spoile dvata commit-i
+
+
+30. git log
+commit 9a9a56afddc5337e67a5b8de1b7c9f5e48dec9e0 (HEAD -> branch2)
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:15:04 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit 1996990fc0f03837b96d873b2f069bf79e52432b (origin/branch2)
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:09:48 2022 +0100
+
+    Add quantities to the items
+
+commit a2f374914d6a4647d9057ccc38154c68849c70be
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:09:06 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 9ceff2fd8331910f15e091bc162086324406ccd9
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:03:26 2022 +0100
+
+    Update README.md
+
+commit d3a12c3e65921f713436262f216153e69bbad47c
+Author: Ivana Dimitrovska <ivana.z.dimitrovska@gmail.com>
+Date:   Mon Mar 21 01:03:04 2022 +0100
+
+    Initial commit
+
+31. git checkout master //se prefrluvame na grankata master
+
+32. git merge branch1 // ja spojuvame so grankata branch1, tuka ne se pojavuvaat konflikti, no tie se spojuvaat rekurzivno
+C:\Users\ivana\SI_2022_lab1_203084>git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+33. C:\Users\ivana\SI_2022_lab1_203084>git merge branch2 //tuka se pojavuva konflikt ako sakame grankata branch2 da ja spoime so master 
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+//konfliktot go reshavame so toa shto ja modificirame datotekata shopping_list.txt, so toa shto gi prifakjame promenite od grankata master
+
+33. git add .
+
+34. git commit -m "Merge branch 'branch2'"//so ovoj commit gi commit-nuvame promenite (shto sme gi prifatile od master)
+
+35. git add .
+
+36. git commit -m "Add docs"//ja dodavame dokumentacijata
+
+37. git push origin master //ja sinhronizirame grankata master so repozitoriumot
+
+38. git push origin branch1 //ja sinhronizirame grankata branch1 so repozitoriumot
+
+39. git push origin branch2 //ja sinhronizirame grankata branch2 so repozitoriumot
